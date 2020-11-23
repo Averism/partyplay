@@ -10,3 +10,9 @@ stats.json
 npm-debug.log
 .idea
 test.sh
+
+# AverTemplate
+fonts
+workspace
+cache
+webpack_assets
