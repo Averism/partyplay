@@ -1,8 +1,9 @@
 import path from "path"
+import server from "./server"
 
 export default function main():number{
     //put your main logic here
-    console.log("Hello World");
+    server();
     return 0;
 }
 
