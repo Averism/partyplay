@@ -1,0 +1,29 @@
+{
+    "jobs": [
+        {
+            "name": "options",
+            "type": "read",
+            "command": "import-ts single",
+            "location": ["src","utils","options"],
+            "module": "default"
+        },
+        {
+            "name": "wsmodules",
+            "type": "read",
+            "command": "import-ts folder",
+            "location": ["src","wsapp"],
+            "filter": ".*\\.ts"
+        },
+        {
+            "name": "wsapp-client",
+            "type": "write",
+            "command": "write single",
+            "location": ["src","reactapp","lib","wsapp-client.ts"]
+        }
+    ],
+
+    "mappingfile": ["rubahmapping.json"],
+    "helpers": [
+        ["src","utils","wsapp-helper"]
+    ]
+}

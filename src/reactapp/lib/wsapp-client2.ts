@@ -1,5 +1,9 @@
+declare global {
+    interface Window { wsapp: WsappClient; }
+}
+
 class WsappClientTriggers {
-    //#!rubah-write-multi defaulttrigger maketriggers(wsmodules)
+
 }
 
 export class WsappClient {
@@ -10,7 +14,7 @@ export class WsappClient {
         this.__ws.onmessage = function(event: any) {
             const data = JSON.parse(event.data);
             switch(data.name){
-                //#!rubah-write-multi assigntrigger makecases(wsmodules)
+
             }
         }
         this.__ws.onclose = function(event: any) {
@@ -20,9 +24,7 @@ export class WsappClient {
     }
 
     private __initws() {
-        this.__ws = new WebSocket(String(
-            //#!rubah-write wsurl wsaddresses(options)
-        ));
+        this.__ws = new WebSocket("ws://"+"192.168.100.9:3000"+"/wsrpc");
     }
 
     private __ws: WebSocket;
@@ -48,13 +50,14 @@ export class WsappClient {
         console.log(data);
     }
 
-    //#!rubah-write-multi wsapi makecallmethods(wsmodules)
+
     
 }
 
 let sdk = new WsappClient();
 export default sdk;
 
-if(window) {
-    (window as any).wsapp = sdk;
+const w: Window = (window as Window);
+if(w) {
+    w.wsapp = sdk;
 }

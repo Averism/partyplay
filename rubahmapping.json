@@ -1,0 +1,10 @@
+{
+  "defaulttrigger": "//#!rubah-write-multi defaulttrigger maketriggers(wsmodules)",
+  "assigntrigger": "//#!rubah-write-multi assigntrigger makecases(wsmodules)",
+  "wsurl": "//#!rubah-write wsurl wsaddresses(options)",
+  "wsapi": "//#!rubah-write-multi wsapi makecallmethods(wsmodules)",
+  "wsapp-client-defaulttrigger": "//#!rubah-write-multi defaulttrigger maketriggers(wsmodules)",
+  "wsapp-client-assigntrigger": "//#!rubah-write-multi assigntrigger makecases(wsmodules)",
+  "wsapp-client-wsurl": "//#!rubah-write wsurl wsaddresses(options)",
+  "wsapp-client-wsapi": "//#!rubah-write-multi wsapi makecallmethods(wsmodules)"
+}
